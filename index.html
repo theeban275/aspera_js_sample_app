@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aspera Connect Upload/Download Example App</title>
+ 
+    <script type="text/javascript" src="assets/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easyui.min.js"></script>
+ 
+    <script type="text/javascript" src="assets/js/asperaplugininstaller.js"></script>
+    <script type="text/javascript" src="assets/js/application.js"></script>
+ 
+    <link rel="stylesheet" href="assets/css/application.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/easyui.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/icon.css" type="text/css" charset="utf-8">
+ 
+  </head>
+  <body onload="initAsperaConnect()">
+    <h1 style="text-align:center;">Aspera Connect Upload/Download Example App</h1>
+      <pre>
+      <div id="connect_installer" style="display: none; align:center"></div>
+      <fieldset class="button_group">
+        <legend>Choose transfer operation</legend> 
+          <table>
+            <tr style="align:center">
+              <td>
+                <input type="text" id="username" value="sample_user"/>
+              </td>
+              <td>
+                <input type="password" id="userpassword" value=""/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" id="upload_files_button" name="upload" class="button upload_files_button" value="Upload Files"  data-default="Upload Files" />
+              </td>
+              <td>
+                <input type="submit" id="upload_directory_button" name="upload_directory" class="button upload_directory_button" value="Upload Directory"  data-default="Upload Directory" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" id="download_files_button" name="download" class="button download_files_button" value="Download Files"  data-default="Download Files" />
+              </td>
+            </tr>
+          </table>
+      </fieldset>
+      <div id="uploads_group" class="uploads_group" style="display: none">
+        <table id="allUploadTransfers" cellspacing="0" class="allTransfers">
+            <caption class="table_caption">UPLOAD TRANSFERS VIEW</caption>
+            <tr class="xfer_header">
+              <th scope="col" class="nobg">Transfer Progress</th>
+              <th scope="col" class="nobg">File Name</th>
+              <th scope="col" class="nobg">Control buttons</th>
+            </tr>           
+        </table>
+      </div>
+      <div id="downloads_group" class="downloads_group" style="display: none">
+        <table id="allDownloadTransfers" cellspacing="0" class="allTransfers">
+            <caption class="table_caption">DOWNLOAD TRANSFERS VIEW</caption>
+            <tr class="xfer_header">
+              <th scope="col" class="nobg">Transfer Progress</th>
+              <th scope="col" class="nobg">File Name</th>
+              <th scope="col" class="nobg">Control buttons</th>
+            </tr>           
+        </table>
+      </div>
+      <fieldset class="json_group">
+        <legend>JSON Display</legend>
+        <div class="json_container" id="progress_json" style="display: none">
+        </div>
+        <div class="json_container" id="transfer_spec" style="display: none"></div>
+      </fieldset>
+    </pre>
+  </body>
+</html>
