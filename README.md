@@ -1,5 +1,7 @@
 # Aspera Javascript Client App (Sample)
 
+This sample app is based on the code from the aspera demo examples.
+
 ##Prerequisites:
 
 * Have an SSH account created on the DTN
